@@ -20,12 +20,13 @@ class Login {
     get animalsBtn() {return $('[class="cat-ico cat-ico--animal"]');}
     get categoryBtn() {return $('[class="heading-1"]');}
     get allcategoriesLnk() {return $('[property="name"]');}
+    get categoriesitemsLnk() {return $$('.section-categories [role="button"]');}
     // Helper method to avoid code duplication
 
     navigateOnMenuItem(Text) {
         //loop through all of those buttons (item)
         const item = {};
-        this.categoriesLnk.forEach(element => {
+        this.categoriesitemsLnk.forEach(element => {
             item[element.getText()] = element;
         });
         //console.log(Object.keys(item)); -show me in terminal 
